@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/main.html}">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="bgbackground">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <section class="container" layout:fragment="content">
+      <div class="d-flex mt-5  align-items-center justify-content-between">
+            <h1 class="fw-bold">Pengajuan</h1>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createpengajuan">
+              Ajukan Haki
+            </button>
+      </div>
+      
+<div class="mb-5">
+      <table
+      class="table mt-3  table-striped table-bordered table-hover text-center"
+      id = "table-pengajuan">
+      <thead class="table-dark">
+        <tr>
+          <th class="col-1">No</th>
+          <th class="col-2">Nama pengaju</th>
+          <th class="col-2">tanggal diajukan</th>
+          <th class="col-6">files</th>
+          <th class="col-3">status pengajuan</th>
+          <th class="col-3">aksi</th>
+
+          
+        </tr>
+      </thead>
+      </table>
+      </div>
+
+      <!-- Modal Detail -->
+ <div
+ class="modal fade"
+ id="detail"
+ data-bs-backdrop="static"
+ data-bs-keyboard="false"
+ tabindex="-1"
+ aria-labelledby="staticBackdropLabel"
+ aria-hidden="true"
+>
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h1 class="modal-title fs-5" id="staticBackdropLabel">
+         Detail Pengajuan
+       </h1>
+       <button
+         type="button"
+         class="btn-close"
+         data-bs-dismiss="modal"
+         aria-label="Close"
+       ></button>
+     </div>
+     <form>
+       <div class="modal-body">
+        
+        <!-- Table -->
+        
+          <h5 class="card-text">Judul : <span id="detail-judul"></span></h5>
+          <hr>
+          <h5 class="card-text">Deskripsi : <span id="detail-deskripsi"></span></h5>
+          <hr>
+          <h5 class="card-text">Nama Pencipta : <span id="detail-pencipta"></span></h5>
+          <hr>
+          <h5 class="card-text">Kategori : <span id="detail-kategori"></span></h5>
+          <hr>
+          <h5 class="card-text">Status : <span id="detail-status"></span></h5>
+          <hr>
+          <h5 class="card-text">Catatan : <span id="detail-catatan"></span></h5>
+      
+       </div>
+       <div class="modal-footer">
+         <button
+           type="button"
+           class="btn btn-outline-secondary"
+           data-bs-dismiss="modal">
+           Back
+         </button>
+       </div>
+      </div>
+     </form>
+   </div>
+ </div>
+
+ <!-- modal update  -->
+ <div class="modal fade" id="updatepengajuan" tabindex="-1" aria-labelledby="updateLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="updateLabel">Update Pengajuan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form action="">
+        </div>
+        <div class="modal-body">
+
+<!-- judul  -->
+          <div class="input-group mb-4 mt-2">
+            <span
+              class="input-group-text fw-bold bg-secondary-subtle"
+              id="judul"
+              >judul</span>
+
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="judul"
+              id="updated-judul"
+              required/>
+          </div>
+<!-- link  -->
+          <div class="input-group mb-4 mt-2">
+            <span
+              class="input-group-text fw-bold bg-secondary-subtle"
+              id="link"
+              >Link File</span>
+
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="link"
+              id="updated-link"
+              required/>
+          </div>
+<!-- deskripsi  -->
+          <div class="input-group mb-4 mt-2">
+            <span
+              class="input-group-text fw-bold bg-secondary-subtle"
+              id="deskripsi"
+              >Deskripsi</span>
+
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="deskripsi"
+              id="updated-deskripsi"
+              required/>
+          </div>
+<!-- pencipta  -->
+<div class="input-group mb-4 mt-2">
+  <span
+    class="input-group-text fw-bold bg-secondary-subtle"
+    id="pencipta"
+    >Pencipta</span>
+
+  <input
+    type="text"
+    class="form-control"
+    aria-label="Sizing example input"
+    aria-describedby="pencipta"
+    id="updated-pencipta"
+    required/>
+</div>
+
+<!-- kategori  -->
+<div class="input-group mb-4 mt-2">
+  <span
+    class="input-group-text fw-bold bg-secondary-subtle"
+    id="kategori"
+    >kategori</span>
+
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    aria-describedby="kategori"
+    id="update-kategori"
+    required>
+  </select>
+  
+</div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" id="updating-pengajuan" class="btn btn-primary">Save</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<!-- modal create  -->
+<div class="modal fade" id="createpengajuan" tabindex="-1" aria-labelledby="createLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="createLabel">create Pengajuan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form action="">
+        </div>
+        <div class="modal-body">
+
+<!-- judul  -->
+          <div class="input-group mb-4 mt-2">
+            <span
+              class="input-group-text fw-bold bg-secondary-subtle"
+              id="judul"
+              >judul</span>
+
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="judul"
+              id="created-judul"
+              required/>
+          </div>
+<!-- link  -->
+          <div class="input-group mb-4 mt-2">
+            <span
+              class="input-group-text fw-bold bg-secondary-subtle"
+              id="link"
+              >Link File</span>
+
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="link"
+              id="created-link"
+              required/>
+          </div>
+<!-- deskripsi  -->
+          <div class="input-group mb-4 mt-2">
+            <span
+              class="input-group-text fw-bold bg-secondary-subtle"
+              id="deskripsi"
+              >Deskripsi</span>
+
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="deskripsi"
+              id="created-deskripsi"
+              required/>
+          </div>
+<!-- pencipta  -->
+<div class="input-group mb-4 mt-2">
+  <span
+    class="input-group-text fw-bold bg-secondary-subtle"
+    id="pencipta"
+    >Pencipta</span>
+
+  <input
+    type="text"
+    class="form-control"
+    aria-label="Sizing example input"
+    aria-describedby="pencipta"
+    id="created-pencipta"
+    required/>
+</div>
+
+<!-- kategori  -->
+<div class="input-group mb-4 mt-2">
+  <span
+    class="input-group-text fw-bold bg-secondary-subtle"
+    id="kategori"
+    >kategori</span>
+
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    aria-describedby="kategori"
+    id="created-kategori"
+    required>
+  </select>
+  
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <button type="submit" id="creating-pengajuan" class="btn btn-primary">Save</button>
+</div>
+</form>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+      </div>
+    </section>
+    <div layout:fragment="js">
+        <script th:src="@{/js/pengajuan.js}"></script>
+      </div>
+</body>
+</html>

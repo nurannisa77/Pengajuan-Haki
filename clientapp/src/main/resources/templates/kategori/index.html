@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/main.html}">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="bgbackground">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori</title>
+</head>
+<body>
+
+
+    <section class="container" layout:fragment="content">
+        <div class="d-flex mt-5  align-items-center justify-content-between">
+            <h1 class="fw-bold">List Kategori</h1>
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#create">
+        Tambah Kategori
+      </button>
+      </div>
+
+      <!-- Modal create -->
+<div class="modal fade" id="create" tabindex="-1" aria-labelledby="createLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="createLabel">Add kategori</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <form action="">
+          </div>
+          <div class="modal-body">
+          
+  
+            <div class="input-group mb-4 mt-2">
+              <span
+                class="input-group-text fw-bold bg-secondary-subtle"
+                id="name"
+                >Name</span>
+  
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="name"
+                id="create-name"
+                required/>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" id="create-kategori" class="btn btn-primary">Save</button>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  
+      <!-- modal update  -->
+      <div class="modal fade" id="updatek" tabindex="-1" aria-labelledby="updateLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="updateLabel">Update Kategori</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <form action="">
+              </div>
+              <div class="modal-body">
+
+                <div class="input-group mb-4 mt-2" style="display: none;">
+                    <span class="input-group-text fw-bold bg-secondary-subtle" id="id">id</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="name" id="update-id" required/>
+                </div>
+                
+  
+                <div class="input-group mb-4 mt-2">
+                  <span
+                    class="input-group-text fw-bold bg-secondary-subtle"
+                    id="name"
+                    >Name</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="name"
+                    id="update-name"
+                    required/>
+                </div>
+      
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" id="update-kategori" class="btn btn-primary">Save</button>
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
+
+     
+      <div>
+        <table
+        class="table mt-3  table-striped table-bordered table-hover text-center"
+        id = "table-kategori">
+        <thead class="table-dark">
+          <tr>
+            <th class="col-1">No</th>
+            <th class="col-4">Name</th>
+            <th class="col-2">Action</th>
+          </tr>
+        </thead>
+        </table>
+    
+    </div>
+    </section>
+    <div layout:fragment="js">
+        <script th:src="@{/js/kategori.js}"></script>
+      </div>
+</body>
+</html>

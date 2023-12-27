@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --custom-primary: #0c356a;
+  --custom-secondary: #0174be;
+  --custom-tertiary: #ffc436;
+  --custom-background: #fff0ce;
+}
+
+
+.background {
+  /* background-color: var(--custom-background); */
+  color: var(--custom-background);
+}
+
+.tertiary {
+  /* background-color: var(--custom-tertiary); */
+  color: var(--custom-tertiary);
+}
+
+.secondary {
+  /* background-color: var(--custom-secondary); */
+  color: var(--custom-secondary);
+}
+
+.primary {
+  /* background-color: var(--custom-primary); */
+  color: var(--custom-primary);
+}
+
+.ubuntuh1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+.ubuntuh2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.ubuntuh3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.opensanssemih1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.opensanssemih2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+
+}
+
+.opensanssemih3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.opensansh1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.opensansh2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.opensansh3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.bgtertiary {
+  background-color: var(--custom-tertiary);
+  /* color: var(--custom-tertiary); */
+}
+
+.bgsecondary {
+  background-color: var(--custom-secondary);
+  /* color: var(--custom-secondary); */
+}
+
+.bgprimary {
+  background-color: var(--custom-primary);
+  /* color: var(--custom-primary); */
+}
+
+.bgbackground {
+  background-color: var(--custom-background);
+  /* color: var(--custom-background); */
+}
+
+#content {
+  width: 50%;
+}
+
+ body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .content-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .lottie-container {
+      width: 100%; 
+      max-width: 30%; 
+      margin-right: 20px; 
+      margin-bottom: 20px; 
+    }
+
+    .text-container {
+      flex-grow: 1;
+      max-width: 70%; 
+    }
+
+    .ubuntuh3 {
+     
+      max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .lottie-container {
+        width: 30%; 
+        max-width: none; 
+      }
+    }
+
+.opensanssemih3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.opensansh1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.opensansh2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.opensansh3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.bgtertiary {
+  background-color: var(--custom-tertiary);
+  /* color: var(--custom-tertiary); */
+}
+
+.bgsecondary {
+  background-color: var(--custom-secondary);
+  /* color: var(--custom-secondary); */
+}
+
+.bgprimary {
+  background-color: var(--custom-primary);
+  /* color: var(--custom-primary); */
+}
+
+.bgbackground {
+  background-color: var(--custom-background);
+  /* color: var(--custom-background); */
+}
+
+#content {
+  width: 50%;
+}
+
+/* footer */
+.footBar {
+  position: absolute;
+  width: 100%;
+  background-color:  var(--custom-primary);
+  color: var(--custom-background);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  bottom: 0;
+
+}

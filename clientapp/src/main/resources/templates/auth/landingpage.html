@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS local -->
+    <link rel="stylesheet" th:href="@{css/landing-page.css}" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="./assets/icons/logo.png"
+              alt="Logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top"
+            />
+            <span class="ms-2">Pengajuan HaKI</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " href="#">Beranda</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" th:classappend="${isActive == 'login' ? 'active fw-bold' : ''}" th:href="@{/login}">Masuk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link daftar" href="#">Daftar</a>
+            </li>
+            <li class="nav-item">
+                <a
+                class="nav-link"
+                th:classappend="${isActive == 'login' ? 'active fw-bold' : ''}"
+                th:href="@{/login}"
+                >Masuk</a
+              </li>
+              <li class="nav-item">
+                <a class="nav-link daftar" href="#">Daftar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="hero">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                Pengajuan HaKI untuk Pengalihan atas Hak Cipta
+              </h1>
+              <p class="hero-desc">
+                Tempat terbaik untuk mewujudkan ide brilian Anda! Kami
+                mengundang Anda untuk menjaga dan melindungi Hak Kekayaan
+                Intelektual (HaKI) Anda dengan mudah dan efisien.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <img
+              src="./assets/images/hero-image.png"
+              alt="Hero Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-list">
+              <div class="feature-card">
+                <div class="feature-content text-center">
+                  <h2>Merek</h2>
+                </div>
+                <div class="feature-icon text-center">
+                  <svg
+                    width="118"
+                    height="117"
+                    viewBox="0 0 118 117"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_d_129_9)">
+                      <path
+                        d="M50.3752 101.353L107.628 44.1C108.826 42.9021 109.414 41.2247 109.227 39.541L106.073 11.1499C105.785 8.5577 103.738 6.51137 101.146 6.22334L72.755 3.06878C71.0713 2.8817 69.3939 3.47012 68.196 4.668L10.9432 61.9208C8.76544 64.0986 8.76544 67.6294 10.9432 69.8072L42.4888 101.353C44.6666 103.531 48.1974 103.531 50.3752 101.353Z"
+                        stroke="#FFF0CE"
+                        stroke-width="5.57653"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_129_9"
+                        x="0.945079"
+                        y="0.246338"
+                        width="116.681"
+                        height="116.681"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="5.57653" />
+                        <feGaussianBlur stdDeviation="2.78826" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_129_9"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_129_9"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-list">
+              <div class="feature-card">
+                <div class="feature-content text-center">
+                  <h2>Hak Cipta</h2>
+                </div>
+                <div class="feature-icon text-center">
+                  <svg
+                    width="118"
+                    height="117"
+                    viewBox="0 0 118 117"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_d_129_9)">
+                      <path
+                        d="M50.3752 101.353L107.628 44.1C108.826 42.9021 109.414 41.2247 109.227 39.541L106.073 11.1499C105.785 8.5577 103.738 6.51137 101.146 6.22334L72.755 3.06878C71.0713 2.8817 69.3939 3.47012 68.196 4.668L10.9432 61.9208C8.76544 64.0986 8.76544 67.6294 10.9432 69.8072L42.4888 101.353C44.6666 103.531 48.1974 103.531 50.3752 101.353Z"
+                        stroke="#FFF0CE"
+                        stroke-width="5.57653"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_129_9"
+                        x="0.945079"
+                        y="0.246338"
+                        width="116.681"
+                        height="116.681"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="5.57653" />
+                        <feGaussianBlur stdDeviation="2.78826" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_129_9"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_129_9"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-list">
+              <div class="feature-card">
+                <div class="feature-content text-center">
+                  <h2>Paten</h2>
+                </div>
+                <div class="feature-icon text-center">
+                  <svg
+                    width="118"
+                    height="117"
+                    viewBox="0 0 118 117"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_d_129_9)">
+                      <path
+                        d="M50.3752 101.353L107.628 44.1C108.826 42.9021 109.414 41.2247 109.227 39.541L106.073 11.1499C105.785 8.5577 103.738 6.51137 101.146 6.22334L72.755 3.06878C71.0713 2.8817 69.3939 3.47012 68.196 4.668L10.9432 61.9208C8.76544 64.0986 8.76544 67.6294 10.9432 69.8072L42.4888 101.353C44.6666 103.531 48.1974 103.531 50.3752 101.353Z"
+                        stroke="#FFF0CE"
+                        stroke-width="5.57653"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_129_9"
+                        x="0.945079"
+                        y="0.246338"
+                        width="116.681"
+                        height="116.681"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="5.57653" />
+                        <feGaussianBlur stdDeviation="2.78826" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_129_9"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_129_9"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-list">
+              <div class="feature-card">
+                <div class="feature-content text-center">
+                  <h2>Desain Industri</h2>
+                </div>
+                <div class="feature-icon text-center">
+                  <svg
+                    width="118"
+                    height="117"
+                    viewBox="0 0 118 117"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_d_129_9)">
+                      <path
+                        d="M50.3752 101.353L107.628 44.1C108.826 42.9021 109.414 41.2247 109.227 39.541L106.073 11.1499C105.785 8.5577 103.738 6.51137 101.146 6.22334L72.755 3.06878C71.0713 2.8817 69.3939 3.47012 68.196 4.668L10.9432 61.9208C8.76544 64.0986 8.76544 67.6294 10.9432 69.8072L42.4888 101.353C44.6666 103.531 48.1974 103.531 50.3752 101.353Z"
+                        stroke="#FFF0CE"
+                        stroke-width="5.57653"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_129_9"
+                        x="0.945079"
+                        y="0.246338"
+                        width="116.681"
+                        height="116.681"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="5.57653" />
+                        <feGaussianBlur stdDeviation="2.78826" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_129_9"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_129_9"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-list">
+              <div class="feature-card">
+                <div class="feature-content text-center">
+                  <h2>Rahasia Dagang</h2>
+                </div>
+                <div class="feature-icon text-center">
+                  <svg
+                    width="118"
+                    height="117"
+                    viewBox="0 0 118 117"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_d_129_9)">
+                      <path
+                        d="M50.3752 101.353L107.628 44.1C108.826 42.9021 109.414 41.2247 109.227 39.541L106.073 11.1499C105.785 8.5577 103.738 6.51137 101.146 6.22334L72.755 3.06878C71.0713 2.8817 69.3939 3.47012 68.196 4.668L10.9432 61.9208C8.76544 64.0986 8.76544 67.6294 10.9432 69.8072L42.4888 101.353C44.6666 103.531 48.1974 103.531 50.3752 101.353Z"
+                        stroke="#FFF0CE"
+                        stroke-width="5.57653"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_129_9"
+                        x="0.945079"
+                        y="0.246338"
+                        width="116.681"
+                        height="116.681"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="5.57653" />
+                        <feGaussianBlur stdDeviation="2.78826" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_129_9"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_129_9"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content py-3">
+          <p class="mb-0 text-center">
+            &copy; 2023 PH by Project Akhir Kelompok 4. All Right Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="path-to-your-script.js"></script>
+  </body>
+</html>

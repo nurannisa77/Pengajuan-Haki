@@ -1,0 +1,20 @@
+
+body {
+    font-size: 10px;
+  }
+  
+  
+.link-navbar {
+  font-size: 10px !important; 
+}
+  .modal-title,
+  .modal-body,
+  .modal-footer,
+  .table th,
+  .table td,
+  .dropdown-item {
+    font-size: 10px; 
+  }
+ 
+
+  
